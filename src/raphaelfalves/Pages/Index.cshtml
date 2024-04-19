@@ -12,8 +12,8 @@
                 Olá! Sou Raphael, desenvolvedor .NET que contribui planejando, desenvolvendo e mantendo projetos de grande escala, que alcançam mais de 3 mil pessoas por dia e faturam mais de 6 dígitos. Tenho certeza de que juntos não temos limites. 👩🏾‍🚀
             </p>
             <div>
-                <a href="https://github.com/raphaelfalves" target="_blank"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/raphaelfalves" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a id="githubLink" href="https://github.com/raphaelfalves" target="_blank"><i class="bi bi-github"></i></a>
+                <a id="linkedinLink" href="https://www.linkedin.com/in/raphaelfalves" target="_blank"><i class="bi bi-linkedin"></i></a>
             </div>
         </div>
         <div class="col-md-4">
@@ -21,3 +21,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.getElementById('githubLink').addEventListener('click', function () {
+        trackButtonClick('GitHub');
+    });
+
+    document.getElementById('linkedinLink').addEventListener('click', function () {
+        trackButtonClick('LinkedIn');
+    });
+
+    function trackButtonClick(platform) {
+        var message = `Usuário clicou no link do ${platform}`;
+        appInsights.trackTrace({ message: message });
+    }
+</script>
