@@ -4,6 +4,13 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationInsightsResourceId>/subscriptions/88c3d8f5-e873-4561-a68c-2ea5a57fad67/resourceGroups/raphaelfalves/providers/microsoft.insights/components/raphaelfalves</ApplicationInsightsResourceId>
+    <UserSecretsId>8fd2d3e1-6b46-43d7-9c22-ef42507a27b8</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="8.0.4" />
+  </ItemGroup>
 
 </Project>

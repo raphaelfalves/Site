@@ -14,7 +14,12 @@ namespace raphaelfalves.Pages
 
         public void OnGet()
         {
+            var request = Request;
+            var ipUsuario = request.HttpContext.Connection.RemoteIpAddress;
+            var localUsuario = request.Headers["X-Forwarded-For"];
 
+            _logger.LogInformation($"Endereço IP do usuário: {ipUsuario}");
+            _logger.LogInformation($"Local do usuário: {localUsuario}");
         }
     }
 }
